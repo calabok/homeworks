@@ -1,6 +1,5 @@
 require 'net/http'
 require 'json'
-
 # discribes Student
 class Student
   attr_reader :hws, :subscribers, :name
@@ -12,12 +11,12 @@ class Student
   end
 
   def submit_homework(hmw)
-    uri = URI('https://www.example.edu')
+    uri = URI('https://www.example.com')
     Net::HTTP.post(uri, hmw.to_json)
   end
 
-  def add_subscriber(mentor)
-    @subscribers << mentor
+  def add_subscriber(subscriber)
+    @subscribers << subscriber
   end
 
   def create_homework(name, content)

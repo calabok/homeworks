@@ -10,7 +10,7 @@ class Notification
   end
 
   def to_s
-    "To: #{@whom.name},from: #{@from_whom.name},
-     Contents: #{@content}, status: #{@status}"
+    "To: #{@whom.name},from: #{@from_whom.name}," \
+    "Contents: #{@content}, status: #{@status}"
   end
 end
